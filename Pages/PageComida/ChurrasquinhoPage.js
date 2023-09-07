@@ -57,7 +57,7 @@ const ChurrasquinhoPage = () => {
           <Image source={restauranteAleatorio.foto} style={styles.foto} />
           <Text style={styles.nome}>{restauranteAleatorio.nome}</Text>
           <Text style={styles.descricao}>{restauranteAleatorio.descricao}</Text>
-          <Button
+          <Button style={styles.button}
             title="Ver Localização"
             onPress={() => {
               // Abra a localização no Google Maps ou outro aplicativo de mapa
