@@ -1,10 +1,19 @@
 import React from 'react';
-import { ActivityIndicator ,View, Button, Text, StyleSheet, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import {View, Button, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-const Inicial = ({ navigation }) => {
+
+const Inicial = ({  }) => {
+  const navigation = useNavigation();
+
+  const handleImagePress = () => {
+    navigation.navigate('user'); 
+  };
+  
+  
   return (
     
-    //<ActivityIndicator size="small" color="#0000ff">
+
     <View style={styles.container}>
     <View style={styles.buttonContainer}>
       <Button color={'#E07F21'} title="Delivery" onPress={() => navigation.navigate('escolherTipo', { irPag: false })} />
@@ -13,8 +22,12 @@ const Inicial = ({ navigation }) => {
       <Button  color={'#E07F21'} style={styles.button}  title="Ir até o local" onPress={() => navigation.navigate('escolherTipo', { irPag: true})} />
     </View>
     <Text style={styles.txt}>Olá, seja bem vindo novamente {'\n '} O que vamos fazer hoje?</Text>
+    <TouchableOpacity onPress={handleImagePress}>
+        <Image source={require('../src/icons/user.png')} style={styles.icon} />
+      </TouchableOpacity>
+
   </View>
-  //</ActivityIndicator>
+ 
   );
 };
 
@@ -58,7 +71,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     marginTop: 20, 
   },
-
+  icon: {
+    position: 'absolute',
+    top: 20, // Ajuste a posição vertical conforme necessário
+    right: 20, // Ajuste a posição horizontal conforme necessário
+    width: 30, // Ajuste o tamanho conforme necessário
+    height: 30, // Ajuste o tamanho conforme necessário
+  },
 
 });
 

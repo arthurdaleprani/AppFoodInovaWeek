@@ -7,6 +7,8 @@ import ChurrasquinhoPage from './Pages/PageComida/ChurrasquinhoPage';
 import PizzaPage from './Pages/PageComida/PizzaPage';
 import HamburguerPage from './Pages/PageComida/HamburguerPage';
 import ComidaJaponesaPage from './Pages/PageComida/ComidaJaponesaPage';
+import user from './Pages/user';
+
 
 const Stack = createStackNavigator();
 
@@ -20,6 +22,7 @@ const AppNavigator = () => {
           <Stack.Screen name="PizzaPage" component={PizzaPage} />
           <Stack.Screen name="HamburguerPage" component={HamburguerPage} />
           <Stack.Screen name="ComidaJaponesaPage" component={ComidaJaponesaPage} />
+          <Stack.Screen name='user' component={user}/>
 </Stack.Navigator>
 
     </NavigationContainer>
