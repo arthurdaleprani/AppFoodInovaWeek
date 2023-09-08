@@ -54,25 +54,36 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#E1B60A',
   },
+   
   button: {
-    flexDirection: 'row',
+    borderRadius:160,
+    flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#E07F21',
-    padding: 10,
+    padding: 30,
     borderRadius: 5,
     marginBottom: 10,
+    height:160,
+   width: 240, // Ajuste a largura conforme necessário
   },
   buttonImage: {
-    width: 24,
-    height: 24,
-    marginRight: 10,
+    width: '120%', // Ajuste o tamanho da imagem conforme necessário
+    height: '100%', // Ajuste o tamanho da imagem conforme necessário
+    marginBottom: 5, // Espaço entre a imagem e o texto
+    borderRadius:20,
   },
   buttonText: {
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
   },
+  goBackButton: {
+    marginTop: 20,
+    width: '80%', // Ajuste a largura conforme necessário
+  }
 });
 
 export default EscolherTipoScreen;

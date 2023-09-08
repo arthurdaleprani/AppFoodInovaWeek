@@ -99,7 +99,7 @@ pizzariaAleatoria: Estado que armazena dados da pizzaria exibida, inicializado c
                 <Image source = {pizzariaAleatoria.foto} style={styles.foto}/>
                 <Text style={styles.nome}>{pizzariaAleatoria.nome}</Text>
                  <Text style={styles.desc}>{pizzariaAleatoria.desc}</Text>
-          <Button
+          <Button style={styles.btn}
             title="Ver Localização"
             onPress={openLocationInMaps}
           />
@@ -121,27 +121,49 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#E1B60A',
   },
+ 
   foto: {
-    width: 200,
-    height: 200,
-    borderRadius: 10,
+    width: '90%', // Usar uma porcentagem para tornar a imagem responsiva
+    aspectRatio: 1, // Manter a proporção da imagem
+    borderRadius: 50,
+    marginBottom: 30,
+    maxHeight: '50%', // Limitar a altura máxima da imagem
+    alignItems:'center',
+    justifyContent:'center',
+    left:15
+
   },
   nome: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginTop: 10,
+    textAlign: 'center', // Centralizar o texto horizontalmente
   },
   desc: {
     fontSize: 16,
-    marginTop: 10,
+    marginBottom: 20,
+    textAlign: 'center',
   },
-  btn:{
-    width:30,
-    height:30
-  
-   }
-
+  btn: {
+    backgroundColor: '#E07F21',
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 10,
+    width:50
+  },
+  btnText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  goBackButton: {
+    backgroundColor: '#E07F21',
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 10,
+    width:50
+  },
 })
 
 

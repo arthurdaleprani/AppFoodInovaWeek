@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import {View, Button, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Dimensions } from 'react-native';
 
 
 const Inicial = ({  }) => {
@@ -10,6 +11,8 @@ const Inicial = ({  }) => {
     navigation.navigate('user'); 
   };
   
+  const windowWidth = Dimensions.get('window').width;
+
   
   return (
     
@@ -21,7 +24,8 @@ const Inicial = ({  }) => {
     <View style={styles.buttonContainer}>
       <Button  color={'#E07F21'} style={styles.button}  title="Ir até o local" onPress={() => navigation.navigate('escolherTipo', { irPag: true})} />
     </View>
-    <Text style={styles.txt}>Olá, seja bem vindo novamente {'\n '} O que vamos fazer hoje?</Text>
+    <Text style={styles.txt}>Olá, seja bem vindo novamente{'\n '}O que vamos fazer hoje?</Text>
+    <Image source={require('../src/icons/logo.png')} style={styles.logo}/>
     <TouchableOpacity onPress={handleImagePress}>
         <Image source={require('../src/icons/user.png')} style={styles.icon} />
       </TouchableOpacity>
@@ -35,50 +39,54 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-start', 
-    padding: 10,
     backgroundColor: '#E1B60A',
+    paddingTop: 30, 
+    justifyContent: 'center',
   },
   txt: {
-    fontSize: 20,
+    fontSize: 18, 
     fontWeight: 'bold',
-    marginTop: 30,
-
+    position: 'absolute',
+    top: 150, 
+    textAlign: 'center',
+    width: '80%',
   },
-  
   buttonContainer: {
-    flexDirection:'row',
-    justifyContent: 'center', 
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#E07F21',
-    padding: 50,
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 20,
+    paddingVertical: 10, 
+    paddingHorizontal: 20, 
+    borderRadius: 15, 
     shadowColor: '#000',
+    width: '70%',
     shadowOffset: {
-      width: 0,
+      width: 5, 
       height: 2,
     },
     shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowRadius: 3,
     elevation: 5,
-    marginTop: 20, // Espaçamento entre o texto e o primeiro botão
+    marginTop: 20,
   },
-  
-
   title: {
-    fontSize: 20, 
-    fontWeight: 'bold', 
-    marginTop: 20, 
+    fontSize: 18, 
+    fontWeight: 'bold',
+    marginTop: 20,
   },
   icon: {
-    position: 'absolute',
-    top: 20, // Ajuste a posição vertical conforme necessário
-    right: 20, // Ajuste a posição horizontal conforme necessário
-    width: 30, // Ajuste o tamanho conforme necessário
-    height: 30, // Ajuste o tamanho conforme necessário
+    position: 'relative',
+    top: -440, 
+    right: -120, 
+    width: 30, 
+    height: 30, 
   },
-
+  logo: {
+    width: 80, 
+    height: 80, 
+    marginTop: 20,
+  },
 });
 
 export default Inicial;
