@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Image, Text, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Image, Text, StyleSheet, Button } from 'react-native';
 
 const EscolherTipoScreen = ({ navigation, route }) => {
   const { irPag } = route.params;
@@ -38,7 +38,13 @@ const EscolherTipoScreen = ({ navigation, route }) => {
           <Image source={button.image} style={styles.buttonImage} />
           <Text style={styles.buttonText}>{button.title}</Text>
         </TouchableOpacity>
+        
       ))}
+
+      <Button style={styles.btn}
+        title="Voltar"
+        onPress={() => navigation.goBack()}
+      />
     </View>
   );
 };

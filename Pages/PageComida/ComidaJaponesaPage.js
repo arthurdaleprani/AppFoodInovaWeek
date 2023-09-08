@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Image, ActivityIndicator, Button, StyleSheet } from 'react-native';
+import { View, Text, Image, ActivityIndicator, Button, StyleSheet, Linking } from 'react-native';
 
 const Japa = [
  {
@@ -53,7 +53,7 @@ function japaEscolher() {
 
 
 
-const ComidaJaponesaPage = () => {
+const ComidaJaponesaPage = ({navigation, route}) => {
   const [japaAleatorio, setJapaAleatorio] = useState(null)
   const[isLoading, setIsLoading] = useState(true)
   
@@ -65,7 +65,11 @@ const ComidaJaponesaPage = () => {
   }, [])
   
   
-  
+  const openLocationInMaps = () => {
+    if (japaAleatorio && japaAleatorio.localizacao) {
+      Linking.openURL(japaAleatorio.localizacao);
+    }
+  };
   
   return (
     <View style={styles.container}>
@@ -79,11 +83,13 @@ const ComidaJaponesaPage = () => {
           <Button
             style={styles.button}
             title="Ver Localização"
-            onPress={() => {
-              // Abra a localização no Google Maps ou outro aplicativo de mapa
-              // Use japaAleatorio.localizacao para o link
-            }}
+            onPress={ openLocationInMaps }
           />
+
+<Button style={styles.btn}
+        title="Voltar"
+        onPress={() => navigation.goBack()}
+      />
         </View>
       ) : null}
     </View>
@@ -111,13 +117,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 10,
   },
-button:{
-width:30,
-height:30
-
-
+  btn:{
+    width:30,
+    height:30
   
-}
+   }
 
 
 })

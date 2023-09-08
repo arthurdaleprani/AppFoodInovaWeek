@@ -5,11 +5,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
-const User = () =>{
-    const[nome, setNome] = useState('');
-    const[email, setEmail] = useState('');
-    const[numero, setNumero] = useState('');
-    const[dataNasc, setDataNasc] = useState('');
+const User = ({navigation, route}) =>{
+    const[nome, setNome] = useState('Arthur');
+    const[email, setEmail] = useState('sasass@gmail.com');
+    const[numero, setNumero] = useState('27999666666');
+    const[dataNasc, setDataNasc] = useState('02/05/2000');
     const[cidade,setCidade] = useState('Vila Velha-ES')
 
     const salvarDados = async () => {
@@ -67,6 +67,12 @@ return (
       </Picker>
 
       <Button title="Salvar" onPress={salvarDados} />
+       
+       <Button style={styles.btn}
+        title="Voltar"
+        onPress={() => navigation.goBack()}
+      />
+
     </View>
   );
 };

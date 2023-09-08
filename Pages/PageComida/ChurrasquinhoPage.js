@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, ActivityIndicator, Button, StyleSheet } from 'react-native';
+import { View, Text, Image, ActivityIndicator, Button, StyleSheet, Linking } from 'react-native';
 
 const restaurantes = [
   {
@@ -36,7 +36,7 @@ function escolherRestauranteAleatorio() {
   return restaurantes[indiceAleatorio];
 }
 
-const ChurrasquinhoPage = () => {
+const ChurrasquinhoPage = ({navigation, route}) => {
   const [restauranteAleatorio, setRestauranteAleatorio] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -48,6 +48,11 @@ const ChurrasquinhoPage = () => {
     }, 1000);
   }, []);
 
+  const openLocationInMaps = () => {
+    if (restauranteAleatorio && restauranteAleatorio.localizacao) {
+      Linking.openURL(restauranteAleatorio.localizacao);
+    }
+  };
   return (
     <View style={styles.container}>
       {isLoading ? (
@@ -59,11 +64,12 @@ const ChurrasquinhoPage = () => {
           <Text style={styles.descricao}>{restauranteAleatorio.descricao}</Text>
           <Button style={styles.button}
             title="Ver Localização"
-            onPress={() => {
-              // Abra a localização no Google Maps ou outro aplicativo de mapa
-              // Use restauranteAleatorio.localizacao para o link
-            }}
+            onPress={openLocationInMaps}
           />
+<Button style={styles.btn}
+        title="Voltar"
+        onPress={() => navigation.goBack()}
+      />
         </View>
       ) : null}
     </View>
@@ -90,6 +96,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 10,
   },
+ btn:{
+  width:30,
+  height:30
+
+ }
+
 });
 
 export default ChurrasquinhoPage;
