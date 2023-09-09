@@ -66,9 +66,8 @@ return (
         <Picker.Item label="Vila Velha" value="Vila Velha" />
       </Picker>
 
-      <Button title="Salvar" onPress={salvarDados} />
-       
-       <Button style={styles.btn}
+      <Button style={styles.btn} color={'#E07F21'}  title="Salvar" onPress={salvarDados} />
+       <Button   color={'#E07F21'}  style={styles.btn}
         title="Voltar"
         onPress={() => navigation.goBack()}
       />
@@ -94,6 +93,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     padding: 10,
+  paddingBottom:10
   },
 });
 

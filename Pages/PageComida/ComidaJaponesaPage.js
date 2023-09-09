@@ -81,12 +81,14 @@ const ComidaJaponesaPage = ({navigation, route}) => {
           <Text style={styles.nome}>{japaAleatorio.nome}</Text>
           <Text style={styles.desc}>{japaAleatorio.desc}</Text>
           <Button
+             color={'#E07F21'} 
             style={styles.button}
             title="Ver Localização"
             onPress={ openLocationInMaps }
           />
 
-<Button style={styles.btn}
+<Button  color={'#E07F21'} 
+style={styles.btn}
         title="Voltar"
         onPress={() => navigation.goBack()}
       />

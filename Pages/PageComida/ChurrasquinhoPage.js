@@ -62,11 +62,11 @@ const ChurrasquinhoPage = ({navigation, route}) => {
           <Image source={restauranteAleatorio.foto} style={styles.foto} />
           <Text style={styles.nome}>{restauranteAleatorio.nome}</Text>
           <Text style={styles.descricao}>{restauranteAleatorio.descricao}</Text>
-          <Button style={styles.button}
+          <Button  color={'#E07F21'}  style={styles.button}
             title="Ver Localização"
             onPress={openLocationInMaps}
           />
-<Button style={styles.btn}
+<Button  color={'#E07F21'}  style={styles.btn}
         title="Voltar"
         onPress={() => navigation.goBack()}
       />

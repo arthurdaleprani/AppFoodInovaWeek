@@ -7,7 +7,7 @@ import { Dimensions } from 'react-native';
 const Inicial = ({  }) => {
   const navigation = useNavigation();
 
-  const handleImagePress = () => {
+  const handlePress = () => {
     navigation.navigate('user'); 
   };
   
@@ -19,14 +19,21 @@ const Inicial = ({  }) => {
 
     <View style={styles.container}>
     <View style={styles.buttonContainer}>
-      <Button color={'#E07F21'} title="Delivery" onPress={() => navigation.navigate('escolherTipo', { irPag: false })} />
+    <Button color={'#E07F21'} title="Delivery"  
+      
+      />
     </View>
     <View style={styles.buttonContainer}>
       <Button  color={'#E07F21'} style={styles.button}  title="Ir até o local" onPress={() => navigation.navigate('escolherTipo', { irPag: true})} />
+
     </View>
-    <Text style={styles.txt}>Olá, seja bem vindo novamente{'\n '}O que vamos fazer hoje?</Text>
+    <Text style={styles.disabledText}>
+          Desculpe, a opção de Delivery ainda não está disponivel😢
+        </Text>
     <Image source={require('../src/icons/logo.png')} style={styles.logo}/>
-    <TouchableOpacity onPress={handleImagePress}>
+    <Text style={styles.txt}>Olá, seja bem vindo novamente.{'\n '}O que vamos fazer hoje?</Text>
+    
+    <TouchableOpacity onPress={handlePress}>
         <Image source={require('../src/icons/user.png')} style={styles.icon} />
       </TouchableOpacity>
 
@@ -76,7 +83,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   icon: {
-    position: 'relative',
+    position: 'absolute',
     top: -440, 
     right: -120, 
     width: 30, 
@@ -87,6 +94,17 @@ const styles = StyleSheet.create({
     height: 80, 
     marginTop: 20,
   },
+
+  disabledButton: {
+    backgroundColor: '#E07F21',
+    color:'#E07F21'
+  },
+  disabledText: {
+    color: 'black',
+    marginTop: 10,
+    top:-165,
+    fontSize:13
+  }
 });
 
 export default Inicial;

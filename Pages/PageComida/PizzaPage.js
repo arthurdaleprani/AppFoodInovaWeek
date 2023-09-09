@@ -99,11 +99,11 @@ pizzariaAleatoria: Estado que armazena dados da pizzaria exibida, inicializado c
                 <Image source = {pizzariaAleatoria.foto} style={styles.foto}/>
                 <Text style={styles.nome}>{pizzariaAleatoria.nome}</Text>
                  <Text style={styles.desc}>{pizzariaAleatoria.desc}</Text>
-          <Button style={styles.btn}
+          <Button style={styles.btn}  color={'#E07F21'} 
             title="Ver Localização"
             onPress={openLocationInMaps}
           />
-<Button style={styles.btn}
+<Button style={styles.btn}  color={'#E07F21'} 
         title="Voltar"
         onPress={() => navigation.goBack()}
       />

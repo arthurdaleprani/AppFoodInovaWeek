@@ -72,12 +72,12 @@ const HamburguerPage = ({navigation, route}) => {
           <Image source={hamburguerAleatorio.foto} style={styles.foto} />
           <Text style={styles.nome}>{hamburguerAleatorio.nome}</Text>
           <Text style={styles.desc}>{hamburguerAleatorio.desc}</Text>
-          <Button
+          <Button  color={'#E07F21'} 
             title="Ver Localização"
             onPress={openLocationInMaps}
           />
 
-<Button style={styles.btn}
+<Button style={styles.btn}  color={'#E07F21'} 
         title="Voltar"
         onPress={() => navigation.goBack()}
       />
