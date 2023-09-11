@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import {View, Button, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Dimensions } from 'react-native';
+import User from './user';
 
 
 const Inicial = ({  }) => {
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     position: 'absolute',
-    top: -440, 
+    top: -480, 
     right: -120, 
     width: 30, 
     height: 30, 

@@ -4,37 +4,37 @@ import { View, Text, Image, ActivityIndicator, Button, StyleSheet, Linking } fro
 const Hamburguer = [
   {
     nome: 'Fight Burger',
-    foto: require('../../src/imgs/h1.PNG'),
+    foto: require('../../src/imgs/h1.png'),
     localizacao: 'https://goo.gl/maps/aMsgoKLntY9kwMJW8',
     desc: 'Ponto de encontro descontraído para fãs de pugilismo, com mesinhas na calçada, sanduíches, porções e bebidas.',
   },
   {
     nome: 'Buffalos Burger',
-    foto: require('../../src/imgs/h2.PNG'),
+    foto: require('../../src/imgs/h2.png'),
     localizacao: 'https://goo.gl/maps/HUqG1PHcoUfUWUae8',
     desc: "O Buffalo's Burger em Vila Velha é um paraíso gastronômico que oferece hambúrgueres suculentos e um ambiente acolhedor para os amantes da comida americana. Saboreie os sabores autênticos do oeste em cada mordida.",
   },
   {
     nome: 'Texas Prime Burger',
-    foto: require('../../src/imgs/h3.PNG'),
+    foto: require('../../src/imgs/h3.png'),
     localizacao: 'https://goo.gl/maps/L99wabF6ZFrKPG2e9',
     desc: 'O MELHOR sabor do Velho Oeste! 🤠',
   },
   {
     nome: 'Cuñas Burguer',
-    foto: require('../../src/imgs/h4.PNG'),
+    foto: require('../../src/imgs/h4.png'),
     localizacao: 'https://goo.gl/maps/fCwinntHnU6e4woN6',
     desc: "Cuñas Burguer: O sabor inigualável que conquista paladares!"
   },
   {
     nome: 'By Rock Steakhouse',
-    foto: require('../../src/imgs/h6.PNG'),
+    foto: require('../../src/imgs/h6.png'),
     localizacao: 'https://goo.gl/maps/J6MFutH7PGDX8ZSW9',
     desc: 'ByRockVix 🎸🥁🥩',
   },
   {
     nome: 'Heróis Burger',
-    foto: require('../../src/imgs/h5.PNG'),
+    foto: require('../../src/imgs/h5.png'),
     localizacao: 'https://goo.gl/maps/6jKjqMbX6zy6Tj41A',
     desc: '🍔 A melhor hamburgueria temática.',
   },

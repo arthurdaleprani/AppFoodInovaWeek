@@ -6,26 +6,26 @@ const restaurantes = [
     nome: "Bar dos Meninos",
     descricao: "Um bar rústico com mesas ao ar livre e uma grande variedade de espetinhos.",
     localizacao: "https://www.google.com/maps/place/Bar+dos+Meninos/@-20.351264,-40.287719,17z/data=!3m1!4b1!4m6!3m5!1s0xb8166c4fc8fa21:0x91198ecfb04f19ac!8m2!3d-20.351264!4d-40.2851441!16s%2Fg%2F11c3s95qbt?entry=ttu",
-    foto: require('../../src/imgs/meninos.PNG')
+    foto: require('../../src/imgs/meninos.png')
   },
   {
     nome: "Churrasquinho do Fred na Brasa",
     descricao: "Um bar rústico com mesas ao ar livre e uma grande variedade de espetinhos.",
     localizacao: "https://goo.gl/maps/HZhDQh8Li8C2XFFL6",
-    foto: require('../../src/imgs/fred.PNG')
+    foto: require('../../src/imgs/fred.png')
   },
   {
   nome: "Churras415",
   descricao: "Um bar rústico com mesas ao ar livre e uma grande variedade de espetinhos.",
   localizacao: "https://goo.gl/maps/rJbHsAgVdKeNmsvB9",
-  foto: require('../../src/imgs/295.PNG')
+  foto: require('../../src/imgs/295.png')
 
   },
   {
     nome: "Espetão de Itapoã",
     descricao: "Um bar rústico com mesas ao ar livre e uma grande variedade de espetinhos.",
     localizacao: "https://goo.gl/maps/YuwaCCZWjg6Xa2J5A",
-    foto: require('../../src/imgs/espeto.PNG')
+    foto: require('../../src/imgs/espeto.png')
   
     },
     
